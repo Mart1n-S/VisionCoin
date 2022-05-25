@@ -1,48 +1,52 @@
-<h1 align="center">Angular NestJS Starter</h1>
+<h1 align="center">VisionCoin</h1>
 
 <p align="center">
-  <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular Logo" height="120"/>
-  <img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" height="120" alt="Nx Logo">
-  <img src="https://nestjs.com/img/logo-small.svg" height="120" alt="Nest Logo" />
+  <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular Logo" height="80"/>
+  <img src="https://nestjs.com/img/logo-small.svg" height="75" alt="Nest Logo" />
   <br>
   <br>
-  <blockquote align="center"><h3>Angular & NestJS starter for enterprise-grade full-stack projects, built under a clean architecture that helps to scale and maintain a fast workflow.</h3></blockquote>
+  <blockquote align="center"><h3></h3></blockquote>
 </p>
 
-<p align="center">
-  <a href="https://github.com/Finastra/angular-nestjs-starter/actions?query=workflow%3ABuild">
-  <img src="https://github.com/Finastra/angular-nestjs-starter/workflows/Build/badge.svg" alt="Build status" />
-  </a>
-  <a href="./LICENSE.md"><img src="https://img.shields.io/github/license/finastra/angular-nestjs-starter" alt="Repo License" /></a>
-  <a href="https://github.com/Finastra/angular-nestjs-starter/issues">
-    <img src="https://img.shields.io/badge/PRs-welcome-green" alt="PRs welcome"/>
-  </a>
-  <a href="https://gitpod.io/#https://github.com/Finastra/angular-nestjs-starter">
-    <img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod">
-  </a>
-  <a href="https://github.com/facebook/jest">
-    <img src="https://jestjs.io/img/jest-badge.svg" alt="unit tests with Jest" />
-  </a>
-  <a href="https://twitter.com/FinastraFS">
-    <img src="https://img.shields.io/twitter/follow/FinastraFS.svg?style=social&label=Follow">
-  </a>
-</p>
+<div align="center">
+    Build with ❤️ using <b>Finastra Design System</b>
+</div>
+
+<br>
+
+## 📸 User Interface
+
+'''TODO 👉 insert some cool screenshot of your design'''
+
+<br>
+
+## 🧪 Try me out
+
+'''TODO 👉 replace by the environment link when deployed'''
 
 <br>
 
 ## 🚀 Quick Start
 
 ```
+npm install
+
 npm start
 ```
 
-Or in two separate commands :
+For local development 👇
 
 ```
 npm run dev
 
 npm run start:server
 ```
+
+<br>
+
+## 🗺 Architectural Diagram
+
+'''TODO 👉 insert the diagram'''
 
 <br>
 
@@ -78,27 +82,6 @@ Server
 
 <br>
 
-## 🛠️ Make some initial tweaks
-
-- Change application title:
-
-  - Go to [apps/client/src/index.html](./apps/client/src/index.html) and inside the `title` tag, replace "AngularNestjsStarter" with your app name.\
-  - Go to [apps/client/src/app/app.component.ts](./apps/client/src/app/app.component.ts) and change the property `appName`
-
-- Change your favicon:
-
-  Go to [apps/client/src](./apps/client/src/favicon.ico) and replace the current `favicon.ico`
-
-- Start hacking:
-
-  - Go to [libs/features/home/src/lib/home.component.html](./libs/features/home/src/lib/home.component.html) and replace content with your own !
-
-- Enable auth:
-  - Go to [apps/server/src/main.ts](./apps/server/src/main.ts) and uncomment
-  - Go to [apps/server/src/app/app.module.ts](./apps/server/src/app/app.module.ts) and uncomment
-
-<br>
-
 ## Environement variables
 
 | Variable         | Default value                                     |
@@ -131,18 +114,6 @@ Server
 
 _Below are some more advanced commands that might speed up your development flow:_
 
-### Generate a new features
-
-Run `ng g @nrwl/angular:lib my-feature --directory=features` to generate a features library.
-
-### Generate a new cdk
-
-The Component Dev Kit (CDK) is a set of components shared accross you project.
-
-Start by creating your cdk lib by running `ng g @nrwl/angular:lib foo --directory=cdk --simpleModuleName`.
-
-And then run `ng g component foo --project=cdk-foo --flat` to generate a new component.
-
 ### Generate a library
 
 Run `ng g @nrwl/angular:lib my-lib` to generate a library.
@@ -150,6 +121,10 @@ Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 > You can also use any of the plugins above to generate libraries as well.
 
 Libraries are shareable across libraries and applications. They can be imported from `@finastra/mylib`.
+
+### Code scaffolding
+
+Run `ng g component my-component --project=my-app` to generate a new component.
 
 ### Running unit tests
 
