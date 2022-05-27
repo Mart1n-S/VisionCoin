@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
     {
       "addresse": "0x986368273648678",
       "name": "BNB",
-      "code": "BNB",
+      "code": "bnb",
       "icon": "",
       "quantity": 10.28,
       "USDvalue": 30.33,
