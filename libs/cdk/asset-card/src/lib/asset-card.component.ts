@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Asset } from '@finastra/api-interfaces';
 
 @Component({
   selector: 'finastra-asset-card',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssetCardComponent implements OnInit {
 
+  @Input() asset?: Asset;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

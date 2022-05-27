@@ -1,1 +1,3 @@
-<finastra-asset-card></finastra-asset-card>
+<div class="card-list">
+    <finastra-asset-card *ngFor="let asset of assets" [class.active]="asset === assetActive" (click)="onClick(asset)" [asset]="asset"></finastra-asset-card>
+</div>
