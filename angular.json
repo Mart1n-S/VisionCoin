@@ -15,6 +15,32 @@
         }
       }
     },
+    "cdk-asset-card": {
+      "projectType": "library",
+      "root": "libs/cdk/asset-card",
+      "sourceRoot": "libs/cdk/asset-card/src",
+      "prefix": "finastra",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cdk/asset-card"],
+          "options": {
+            "jestConfig": "libs/cdk/asset-card/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/cdk/asset-card/src/**/*.ts",
+              "libs/cdk/asset-card/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client": {
       "projectType": "application",
       "root": "apps/client",
@@ -34,9 +60,7 @@
             "styles": ["apps/client/src/styles.scss"],
             "scripts": [],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "node_modules"
-              ]
+              "includePaths": ["node_modules"]
             }
           },
           "configurations": {
