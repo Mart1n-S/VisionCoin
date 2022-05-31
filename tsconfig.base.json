@@ -18,7 +18,8 @@
     "paths": {
       "@finastra/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@finastra/cdk/asset-card": ["libs/cdk/asset-card/src/index.ts"],
-      "@finastra/features/home": ["libs/features/home/src/index.ts"]
+      "@finastra/features/home": ["libs/features/home/src/index.ts"],
+      "@finastra/features/portfolio": ["libs/features/portfolio/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

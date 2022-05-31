@@ -153,6 +153,32 @@
         }
       }
     },
+    "features-portfolio": {
+      "projectType": "library",
+      "root": "libs/features/portfolio",
+      "sourceRoot": "libs/features/portfolio/src",
+      "prefix": "finastra",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/features/portfolio"],
+          "options": {
+            "jestConfig": "libs/features/portfolio/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/features/portfolio/src/**/*.ts",
+              "libs/features/portfolio/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "server": {
       "root": "apps/server",
       "sourceRoot": "apps/server/src",

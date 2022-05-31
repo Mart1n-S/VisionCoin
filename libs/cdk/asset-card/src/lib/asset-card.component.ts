@@ -8,7 +8,7 @@ import { Asset } from '@finastra/api-interfaces';
 })
 export class AssetCardComponent implements OnInit {
 
-  @Input() asset?: Asset;
+  @Input() asset!: Asset;
 
   constructor() { }
 
