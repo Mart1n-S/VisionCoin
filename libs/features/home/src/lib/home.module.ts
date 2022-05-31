@@ -1,14 +1,25 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AssetCardModule } from '@finastra/cdk/asset-card';
 import { HomeComponent } from './home.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild([{ path: '', pathMatch: 'full', component: HomeComponent }]),
-    AssetCardModule,
+    RouterModule.forChild([
+      { path: '', redirectTo: 'demo', pathMatch: 'full' },
+      { 
+        path: 'demo',
+        component: HomeComponent,
+        children: [
+          { path: '', redirectTo: 'portfolio', pathMatch: 'full' },
+          {
+            path: 'portfolio',
+            loadChildren: () => import('@finastra/features/portfolio').then((m) => m.PortfolioModule)
+          }
+        ]
+      }
+    ])
   ],
   declarations: [HomeComponent],
 })

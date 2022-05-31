@@ -1,0 +1,7 @@
+<div class="asset-card-list">
+  <finastra-asset-card
+    *ngFor="let asset of assets"
+    (click)="handleClick(asset)"
+    [asset]="asset"
+  ></finastra-asset-card>
+</div>
