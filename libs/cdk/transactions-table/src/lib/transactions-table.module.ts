@@ -11,4 +11,4 @@ import { TransactionsTableComponent } from './transactions-table.component';
   ],
   exports: [TransactionsTableComponent],
 })
-export class TransactionsTableModule {}
+export class TransactionsTableModule {};

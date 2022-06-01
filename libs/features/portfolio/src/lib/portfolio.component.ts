@@ -36,25 +36,15 @@ export class PortfolioComponent implements OnInit {
       "USDvalue": 30.33,
       "h": 3.2
     }
-  ]
+  ];
 
-// transactions: Transaction[] = [
-//   {
-//     "name": "Bitcoin",
-//     "quantity": 0.2,
-//     "code": "BTC"
-//   },
-//   {
-//     "name": "Etherum",
-//     "quantity": 0.4,
-//     "code": "ETH"
-//   },
-//   {
-//     "name": "BNB",
-//     "quantity": 0.03,
-//     "code": "bnb"
-//   }
-//]
+
+    //  transactions: Transaction[] = [
+    //    {position: 1, name: 'Bitcoin', quantity: 1.5, code: 'BTC'},
+    //    {position: 2, name: 'Etherum', quantity: 0.2, code: 'ETH'},
+    //    {position: 3, name: 'BNB', quantity: 1.90, code: 'bnb'},
+    //  ];
+
 
   constructor() { }
 

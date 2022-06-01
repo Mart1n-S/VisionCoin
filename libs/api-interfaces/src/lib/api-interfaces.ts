@@ -8,8 +8,9 @@ export interface Asset {
   h: number;
 };
 
-//  export interface Transaction {
-//    name: string;
-//    quantity: number;
-//    code: string;
-//  }
+ export interface Transaction {
+   name: string;
+   position: number;
+   quantity: number;
+   code: string;
+ }
