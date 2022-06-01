@@ -6,4 +6,10 @@ export interface Asset {
   quantity: number;
   USDvalue: number;
   h: number;
-}
+};
+
+//  export interface Transaction {
+//    name: string;
+//    quantity: number;
+//    code: string;
+//  }

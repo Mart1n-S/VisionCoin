@@ -38,6 +38,24 @@ export class PortfolioComponent implements OnInit {
     }
   ]
 
+// transactions: Transaction[] = [
+//   {
+//     "name": "Bitcoin",
+//     "quantity": 0.2,
+//     "code": "BTC"
+//   },
+//   {
+//     "name": "Etherum",
+//     "quantity": 0.4,
+//     "code": "ETH"
+//   },
+//   {
+//     "name": "BNB",
+//     "quantity": 0.03,
+//     "code": "bnb"
+//   }
+//]
+
   constructor() { }
 
   ngOnInit(): void {

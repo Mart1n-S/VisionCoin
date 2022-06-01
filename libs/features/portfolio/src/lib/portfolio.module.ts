@@ -13,7 +13,9 @@ import { PortfolioComponent } from './portfolio.component';
         component: PortfolioComponent
       }
     ]),
-    AssetCardModule
+    AssetCardModule,
+    // TransactionsTableModule,
+
   ],
   declarations: [
     PortfolioComponent
