@@ -1,49 +1,13 @@
-.card{
-    background-color: #414142 ;
-    height: 200px;
-    width: 280px;
-    border-radius: 20px;
-    box-shadow: 0 5px #5b5b5c;
+.mat-card {
+  width: 200px;
+
+  &:hover {
+    background-color: #694ed6;
+  }
 }
 
-.card:hover{
-    background-color: #3b79ec ;
-    cursor: pointer;
-    transform: translateY(3px);
-}
-
-
-:host(.active) {
-    .card{
-        background-color: #3b79ec;
-    }
-}
-
-.container{
-    padding: 12px;
-}
-
-h1{
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h2{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
-}
-
-h3{
-    font-family: Arial, Helvetica, sans-serif;
-    opacity: 0.50;
-}
-
-h4{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
