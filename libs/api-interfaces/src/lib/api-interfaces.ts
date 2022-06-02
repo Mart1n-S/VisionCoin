@@ -7,3 +7,10 @@ export interface Asset {
   USDvalue: number;
   h: number;
 }
+
+export interface Transaction {
+  hash: string;
+  label: string;
+  quantity: number;
+  symbol: string;
+}

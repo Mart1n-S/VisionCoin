@@ -41,6 +41,32 @@
       },
       "tags": []
     },
+    "cdk-transactions-table": {
+      "projectType": "library",
+      "root": "libs/cdk/transactions-table",
+      "sourceRoot": "libs/cdk/transactions-table/src",
+      "prefix": "finastra",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cdk/transactions-table"],
+          "options": {
+            "jestConfig": "libs/cdk/transactions-table/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/cdk/transactions-table/src/**/*.ts",
+              "libs/cdk/transactions-table/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client": {
       "projectType": "application",
       "root": "apps/client",

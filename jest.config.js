@@ -30,5 +30,9 @@ module.exports = {
     'jest-preset-angular/build/serializers/ng-snapshot',
     'jest-preset-angular/build/serializers/html-comment',
   ],
-  projects: ['<rootDir>/libs/cdk/asset-card', '<rootDir>/libs/features/portfolio'],
+  projects: [
+    '<rootDir>/libs/cdk/asset-card',
+    '<rootDir>/libs/features/portfolio',
+    '<rootDir>/libs/cdk/transactions-table',
+  ],
 };
