@@ -6,11 +6,11 @@ export interface Asset {
   quantity: number;
   USDvalue: number;
   h: number;
-};
+}
 
- export interface Transaction {
-   name: string;
-   position: number;
-   quantity: number;
-   code: string;
- }
+export interface Transaction {
+  hash: string;
+  label: string;
+  quantity: number;
+  symbol: string;
+}

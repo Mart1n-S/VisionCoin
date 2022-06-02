@@ -4,7 +4,8 @@
     (click)="handleClick(asset)"
     [asset]="asset"
   ></finastra-asset-card>
-  <!-- <finastra-transactions-table
-    *ngFor="let transaction of transactions"
-  ></finastra-transactions-table> -->
+  <finastra-transactions-table
+    [transactions]="transactions"
+    [displayedColumns]="displayedColumns"
+  ></finastra-transactions-table>
 </div>
