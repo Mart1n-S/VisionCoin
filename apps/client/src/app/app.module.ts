@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GlobalNavModule } from '@finastra/angular-components/global-nav';
+import { CoreModule } from '@finastra/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 
@@ -18,6 +19,7 @@ import { AppRoutingModule } from './app.routing.module';
     MatButtonModule,
     GlobalNavModule,
     AppRoutingModule,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

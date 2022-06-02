@@ -19,6 +19,7 @@
       "@finastra/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@finastra/cdk/asset-card": ["libs/cdk/asset-card/src/index.ts"],
       "@finastra/cdk/transactions-table": ["libs/cdk/transactions-table/src/index.ts"],
+      "@finastra/core": ["libs/core/src/index.ts"],
       "@finastra/features/home": ["libs/features/home/src/index.ts"],
       "@finastra/features/portfolio": ["libs/features/portfolio/src/index.ts"]
     }

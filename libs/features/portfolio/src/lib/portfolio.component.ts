@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Asset, Transaction } from '@finastra/api-interfaces';
+import { NODE_RED_URL, PROXY_URL } from '@finastra/core';
 
 @Component({
   selector: 'finastra-portfolio',
@@ -45,9 +47,28 @@ export class PortfolioComponent implements OnInit {
     { hash: '0x78RE4TVSRE34R', label: 'BNB', quantity: 0.5, symbol: 'bnb' },
   ];
 
-  constructor() {}
+  constructor(
+    private http: HttpClient,
+    @Inject(PROXY_URL) protected proxyUrl: string,
+    @Inject(NODE_RED_URL) protected nodeRedUrl: string
+  ) {}
 
-  ngOnInit(): void {}
+  getData() {
+    return this.get<any>(`/addresses`);
+  }
+
+  ngOnInit(): void {
+    this.getData().subscribe((res) => console.log(res));
+  }
+
+  private get<T>(target: string) {
+    return this.http.get<T>(this.proxyUrl, {
+      params: {
+        serviceId: this.nodeRedUrl,
+        target,
+      },
+    });
+  }
 
   handleClick(asset: Asset): void {
     console.log(asset);
