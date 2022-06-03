@@ -4,11 +4,8 @@ import { MatTableModule } from '@angular/material/table';
 import { TransactionsTableComponent } from './transactions-table.component';
 
 @NgModule({
-  imports: [CommonModule,
-    MatTableModule],
-  declarations: [
-    TransactionsTableComponent
-  ],
+  imports: [CommonModule, MatTableModule],
+  declarations: [TransactionsTableComponent],
   exports: [TransactionsTableComponent],
 })
-export class TransactionsTableModule {};
+export class TransactionsTableModule {}

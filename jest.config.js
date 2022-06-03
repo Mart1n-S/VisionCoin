@@ -34,5 +34,6 @@ module.exports = {
     '<rootDir>/libs/cdk/asset-card',
     '<rootDir>/libs/features/portfolio',
     '<rootDir>/libs/cdk/transactions-table',
+    '<rootDir>/libs/core',
   ],
 };

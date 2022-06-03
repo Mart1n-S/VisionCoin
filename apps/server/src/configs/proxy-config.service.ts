@@ -9,7 +9,12 @@ export class ProxyConfigService implements ProxyModuleOptionsFactory {
   constructor(private configService: ConfigService) {}
 
   createModuleConfig(): ProxyModuleOptions {
-    const services = [];
+    const services = [
+      {
+        id: 'NODE_RED_URL',
+        url: this.configService.get('NODE_RED_URL'),
+      },
+    ];
 
     this.logger.log(services);
 

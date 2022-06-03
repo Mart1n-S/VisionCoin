@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MatCardModule } from '@angular/material/card';
 import { AssetCardComponent } from './asset-card.component';
 
 describe('AssetCardComponent', () => {
@@ -8,9 +8,9 @@ describe('AssetCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AssetCardComponent ]
-    })
-    .compileComponents();
+      declarations: [AssetCardComponent],
+      imports: [MatCardModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {
