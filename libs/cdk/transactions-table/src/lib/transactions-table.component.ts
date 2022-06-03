@@ -7,8 +7,8 @@ import { Transaction } from '@finastra/api-interfaces';
   styleUrls: ['./transactions-table.component.scss'],
 })
 export class TransactionsTableComponent implements OnInit {
-  @Input() transactions?: Transaction[];
-  @Input() displayedColumns?: string[];
+  @Input() transactions!: Transaction[];
+  @Input() displayedColumns!: string[];
 
   constructor() {}
 
