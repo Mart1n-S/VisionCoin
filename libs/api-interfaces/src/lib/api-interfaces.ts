@@ -14,3 +14,8 @@ export interface Transaction {
   quantity: number;
   symbol: string;
 }
+
+export interface Balance {
+  USDvalue: number;
+  h: number;
+}
