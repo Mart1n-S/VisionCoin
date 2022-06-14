@@ -10,6 +10,12 @@
     [displayedColumns]="displayedColumns"
   ></finastra-transactions-table>
  -->
-<div class="balance-card">
-  <finastra-balance-card [balance]="balance"></finastra-balance-card>
+<div class="dashboard">
+  <div class="balance-card">
+    <finastra-balance-card [balance]="balance"></finastra-balance-card>
+  </div>
+  <div class="asset-list">
+    <h5 class="uxg-h5">Your Assets</h5>
+    <finastra-asset-list [assets]="assets"></finastra-asset-list>
+  </div>
 </div>

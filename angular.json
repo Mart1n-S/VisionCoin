@@ -41,6 +41,32 @@
       },
       "tags": []
     },
+    "cdk-asset-list": {
+      "projectType": "library",
+      "root": "libs/cdk/asset-list",
+      "sourceRoot": "libs/cdk/asset-list/src",
+      "prefix": "finastra",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cdk/asset-list"],
+          "options": {
+            "jestConfig": "libs/cdk/asset-list/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/cdk/asset-list/src/**/*.ts",
+              "libs/cdk/asset-list/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "cdk-balance-card": {
       "projectType": "library",
       "root": "libs/cdk/balance-card",
@@ -108,7 +134,15 @@
             "polyfills": "apps/client/src/polyfills.ts",
             "tsConfig": "apps/client/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/client/src/favicon.ico", "apps/client/src/assets"],
+            "assets": [
+              "apps/client/src/favicon.ico",
+              "apps/client/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/cryptocurrency-icons/svg/color",
+                "output": "./assets/cryptocurrency-icons"
+              }
+            ],
             "styles": ["apps/client/src/styles.scss"],
             "scripts": [],
             "stylePreprocessorOptions": {

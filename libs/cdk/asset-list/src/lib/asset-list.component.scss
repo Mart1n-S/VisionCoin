@@ -1,0 +1,39 @@
+.mat-list-base {
+  background: #242424;
+  padding: 0 !important;
+}
+
+.mat-list-base .mat-list-item {
+  height: fit-content !important;
+}
+
+.icon {
+  width: 38px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.positive {
+  color: #26d07c;
+}
+.negative {
+  color: #f9423a;
+}
+
+.left-content {
+  margin-left: 16px;
+}
+
+.right-content {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+::ng-deep .mat-list-item-content {
+  padding: 16px 16px !important;
+}

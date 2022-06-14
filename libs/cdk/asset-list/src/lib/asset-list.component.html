@@ -1,0 +1,17 @@
+<mat-list role="list">
+  <mat-list-item *ngFor="let asset of assets">
+    <img class="icon" src="{{ '/assets/cryptocurrency-icons/' + asset?.code + '.svg' }}" />
+    <div class="content">
+      <div class="left-content">
+        <div class="uxg-subtitle-1">{{ asset?.name }}</div>
+        <div class="uxg-body-3">{{ asset?.quantity }} {{ asset?.code }}</div>
+      </div>
+      <div class="right-content">
+        <div class="uxg-subtitle-1">$ {{ asset?.USDvalue }}</div>
+        <div class="uxg-subtitle-3" [ngClass]="{ positive: asset?.h > 0, negative: asset?.h < 0 }">
+          {{ asset?.h }}%
+        </div>
+      </div>
+    </div>
+  </mat-list-item>
+</mat-list>
