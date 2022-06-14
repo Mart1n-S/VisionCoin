@@ -37,5 +37,6 @@ module.exports = {
     '<rootDir>/libs/core',
     '<rootDir>/libs/cdk/balance-card',
     '<rootDir>/libs/cdk/asset-list',
+    '<rootDir>/libs/cdk/trending-list',
   ],
 };

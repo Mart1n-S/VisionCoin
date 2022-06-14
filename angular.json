@@ -119,6 +119,32 @@
       },
       "tags": []
     },
+    "cdk-trending-list": {
+      "projectType": "library",
+      "root": "libs/cdk/trending-list",
+      "sourceRoot": "libs/cdk/trending-list/src",
+      "prefix": "finastra",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cdk/trending-list"],
+          "options": {
+            "jestConfig": "libs/cdk/trending-list/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/cdk/trending-list/src/**/*.ts",
+              "libs/cdk/trending-list/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client": {
       "projectType": "application",
       "root": "apps/client",
