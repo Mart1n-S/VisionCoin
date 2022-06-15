@@ -1,6 +1,9 @@
+@use '@finastra/fds-theme' as fds;
+
 .mat-list-base {
-  background: #242424;
-  padding: 0 !important;
+  background: var(--fds-surface);
+  padding: var(--fds-spacing-0) !important;
+  @include fds.elevation(1);
 }
 
 .mat-list-base .mat-list-item {
@@ -12,14 +15,14 @@
 }
 
 .positive {
-  color: #26d07c;
+  color: var(--fds-success);
 }
 .negative {
-  color: #f9423a;
+  color: var(--fds-error);
 }
 
 .left-content {
-  margin-left: 16px;
+  margin-left: var(--fds-spacing-3);
   flex: 1 1 0;
 }
 
@@ -27,12 +30,12 @@
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  padding: 0px 16px 0px 0px;
+  padding: var(--fds-spacing-0) var(--fds-spacing-3) var(--fds-spacing-0) var(--fds-spacing-0);
   border-right: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .bookmark {
-  padding: 4px;
+  padding: var(--fds-spacing-1);
 }
 
 .usd-value {
@@ -40,5 +43,5 @@
 }
 
 :host ::ng-deep .mat-list-item-content {
-  padding: 16px 0 16px 16px !important;
+  padding: var(--fds-spacing-3) var(--fds-spacing-0) var(--fds-spacing-3) var(--fds-spacing-3) !important;
 }

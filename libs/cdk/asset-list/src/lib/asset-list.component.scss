@@ -1,6 +1,9 @@
+@use '@finastra/fds-theme' as fds;
+
 .mat-list-base {
-  background: #242424;
-  padding: 0 !important;
+  background: var(--fds-surface);
+  padding: var(--fds-spacing-0) !important;
+  @include fds.elevation(1);
 }
 
 .mat-list-base .mat-list-item {
@@ -18,14 +21,14 @@
 }
 
 .positive {
-  color: #26d07c;
+  color: var(--fds-success);
 }
 .negative {
-  color: #f9423a;
+  color: var(--fds-error);
 }
 
 .left-content {
-  margin-left: 16px;
+  margin-left: var(--fds-spacing-3);
 }
 
 .right-content {
@@ -35,5 +38,5 @@
 }
 
 :host ::ng-deep .mat-list-item-content {
-  padding: 16px 16px !important;
+  padding: var(--fds-spacing-3) !important;
 }

@@ -7,14 +7,14 @@
 .dashboard {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  padding-bottom: 24px;
+  gap: var(--fds-spacing-4);
+  padding-bottom: var(--fds-spacing-4);
 }
 
 .uxg-h5 {
-  margin: 0 0 4px !important;
+  margin: var(--fds-spacing-0) var(--fds-spacing-0) var(--fds-spacing-1) !important;
 }
 
 .uxg-body-1 {
-  margin: 0px !important;
+  margin: var(--fds-spacing-0) !important;
 }

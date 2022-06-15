@@ -8,7 +8,7 @@
         }}</mat-icon>
       </div>
       <div class="right-content">
-        <div class="uxg-h4">${{ balance?.USDvalue }}</div>
+        <div class="uxg-h4">${{ balance?.USDvalue.toFixed(2) }}</div>
         <div
           class="uxg-subtitle-1"
           [ngClass]="{ positive: balance?.h > 0, negative: balance?.h < 0 }"

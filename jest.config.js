@@ -39,5 +39,6 @@ module.exports = {
     '<rootDir>/libs/cdk/asset-list',
     '<rootDir>/libs/cdk/trending-list',
     '<rootDir>/libs/cdk/watchlist',
+    '<rootDir>/libs/services',
   ],
 };

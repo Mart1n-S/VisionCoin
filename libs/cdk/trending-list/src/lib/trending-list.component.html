@@ -1,5 +1,5 @@
 <mat-list role="list">
-  <mat-list-item *ngFor="let asset of assets | slice: 0:3; let index = index">
+  <mat-list-item *ngFor="let asset of trending | slice: 0:3; let index = index">
     <div class="ranking">{{ index + 1 }}</div>
     <img class="icon" src="{{ '/assets/cryptocurrency-icons/' + asset?.code + '.svg' }}" />
     <div class="left-content">

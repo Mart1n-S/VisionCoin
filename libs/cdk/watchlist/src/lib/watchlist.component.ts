@@ -7,7 +7,7 @@ import { Asset } from '@finastra/api-interfaces';
   styleUrls: ['./watchlist.component.scss'],
 })
 export class WatchlistComponent implements OnInit {
-  @Input() assets!: Asset[];
+  @Input() watchlist!: Asset[];
 
   constructor() {}
 

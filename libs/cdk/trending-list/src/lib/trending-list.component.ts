@@ -7,7 +7,7 @@ import { Asset } from '@finastra/api-interfaces';
   styleUrls: ['./trending-list.component.scss'],
 })
 export class TrendingListComponent implements OnInit {
-  @Input() assets!: Asset[];
+  @Input() trending!: Asset[];
 
   constructor() {}
 

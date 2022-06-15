@@ -25,7 +25,8 @@
       "@finastra/cdk/watchlist": ["libs/cdk/watchlist/src/index.ts"],
       "@finastra/core": ["libs/core/src/index.ts"],
       "@finastra/features/home": ["libs/features/home/src/index.ts"],
-      "@finastra/features/portfolio": ["libs/features/portfolio/src/index.ts"]
+      "@finastra/features/portfolio": ["libs/features/portfolio/src/index.ts"],
+      "@finastra/services": ["libs/services/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
