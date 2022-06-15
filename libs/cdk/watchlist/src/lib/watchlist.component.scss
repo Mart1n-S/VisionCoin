@@ -11,12 +11,6 @@
   width: 38px;
 }
 
-.content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .positive {
   color: #26d07c;
 }
@@ -26,14 +20,25 @@
 
 .left-content {
   margin-left: 16px;
+  flex: 1 1 0;
 }
 
 .right-content {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+  padding: 0px 16px 0px 0px;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.bookmark {
+  padding: 4px;
+}
+
+.usd-value {
+  flex: 1 1 0;
 }
 
 :host ::ng-deep .mat-list-item-content {
-  padding: 16px 16px !important;
+  padding: 16px 0 16px 16px !important;
 }

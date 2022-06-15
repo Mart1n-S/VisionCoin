@@ -6,6 +6,7 @@ export interface Asset {
   quantity: number;
   USDvalue: number;
   h: number;
+  bookmark?: boolean;
 }
 
 export interface Transaction {

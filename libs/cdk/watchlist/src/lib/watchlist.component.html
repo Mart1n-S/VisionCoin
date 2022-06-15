@@ -1,0 +1,27 @@
+<mat-list role="list">
+  <mat-list-item *ngFor="let asset of assets">
+    <img class="icon" src="{{ '/assets/cryptocurrency-icons/' + asset?.code + '.svg' }}" />
+    <div class="left-content">
+      <div class="uxg-subtitle-1">{{ asset?.name }}</div>
+      <div class="uxg-body-3">{{ asset?.code }}</div>
+    </div>
+    <div class="right-content">
+      <div class="usd-value uxg-subtitle-1">$ {{ asset?.USDvalue }}</div>
+      <div class="uxg-subtitle-3" [ngClass]="{ positive: asset?.h > 0, negative: asset?.h < 0 }">
+        {{ asset?.h }}%
+      </div>
+    </div>
+    <div class="bookmark">
+      <button
+        mat-icon-button
+        color="onsurface"
+        aria-label="bookmark icon button"
+        (click)="bookMark(asset?.code)"
+        dense
+      >
+        <mat-icon>turned_in</mat-icon>
+      </button>
+    </div>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>

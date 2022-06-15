@@ -6,6 +6,7 @@ import { AssetListModule } from '@finastra/cdk/asset-list';
 import { BalanceCardModule } from '@finastra/cdk/balance-card';
 import { TransactionsTableModule } from '@finastra/cdk/transactions-table';
 import { TrendingListModule } from '@finastra/cdk/trending-list';
+import { WatchlistModule } from '@finastra/cdk/watchlist';
 import { PortfolioComponent } from './portfolio.component';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { PortfolioComponent } from './portfolio.component';
     BalanceCardModule,
     AssetListModule,
     TrendingListModule,
+    WatchlistModule,
   ],
   declarations: [PortfolioComponent],
 })

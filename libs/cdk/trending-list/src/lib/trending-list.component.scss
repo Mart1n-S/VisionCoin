@@ -33,6 +33,6 @@
   flex: 1 1 0;
 }
 
-::ng-deep .mat-list-item-content {
+:host ::ng-deep .mat-list-item-content {
   padding: 16px 16px !important;
 }

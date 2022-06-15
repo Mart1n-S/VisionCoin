@@ -4,3 +4,17 @@
 //   gap: 12px;
 //   align-items: center;
 // }
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 24px;
+}
+
+.uxg-h5 {
+  margin: 0 0 4px !important;
+}
+
+.uxg-body-1 {
+  margin: 0px !important;
+}

@@ -11,6 +11,10 @@
   ></finastra-transactions-table>
  -->
 <div class="dashboard">
+  <div class="title">
+    <h1 class="uxg-body-1">Welcome to</h1>
+    <h4 class="uxg-h4">VisionCoin</h4>
+  </div>
   <div class="balance-card">
     <finastra-balance-card [balance]="balance"></finastra-balance-card>
   </div>
@@ -21,5 +25,9 @@
   <div class="trending">
     <h5 class="uxg-h5">Trending <span class="uxg-body-2">(24H)</span></h5>
     <finastra-trending-list [assets]="assets"></finastra-trending-list>
+  </div>
+  <div class="watchlist">
+    <h5 class="uxg-h5">Watchlist</h5>
+    <finastra-watchlist [assets]="assets"></finastra-watchlist>
   </div>
 </div>
