@@ -1,6 +1,13 @@
 <mat-list role="list">
   <mat-list-item *ngFor="let asset of assets">
-    <img class="icon" src="{{ '/assets/cryptoicon/' + asset?.code + '.svg' }}" />
+    <img
+      class="icon"
+      src="{{
+        'https://raw.githubusercontent.com/ErikThiart/cryptocurrency-icons/master/128/' +
+          asset?.name.toLowerCase().replace(' ', '-') +
+          '.png'
+      }}"
+    />
     <div class="content">
       <div class="left-content">
         <div class="uxg-subtitle-1">{{ asset?.name }}</div>
