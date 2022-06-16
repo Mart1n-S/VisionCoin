@@ -1,22 +1,15 @@
-<!-- <div class="asset-card-list">
-  <finastra-asset-card
-    *ngFor="let asset of assets"
-    (click)="handleClick(asset)"
-    [asset]="asset"
-  ></finastra-asset-card>
-</div>
-  <finastra-transactions-table
-    [transactions]="transactions"
-    [displayedColumns]="displayedColumns"
-  ></finastra-transactions-table>
- -->
 <div class="dashboard">
-  <div class="title">
-    <div class="uxg-body-1">Welcome to</div>
-    <div class="uxg-h4">VisionCoin</div>
+  <div class="header">
+    <div class="title">
+      <div class="uxg-body-1">Welcome to</div>
+      <div class="uxg-h4">VisionCoin</div>
+    </div>
   </div>
   <div class="balance-card">
-    <finastra-balance-card [balance]="balance"></finastra-balance-card>
+    <finastra-balance-card
+      [balance]="balance"
+      (navigationEvent)="handleNavigation($event)"
+    ></finastra-balance-card>
   </div>
   <div class="asset-list">
     <div class="uxg-h5">Your Assets</div>

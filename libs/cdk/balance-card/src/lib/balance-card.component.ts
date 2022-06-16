@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Balance } from '@finastra/api-interfaces';
 
 export interface Action {
@@ -14,6 +14,7 @@ export interface Action {
 })
 export class BalanceCardComponent implements OnInit {
   @Input() balance!: Balance;
+  @Output() navigationEvent = new EventEmitter<string>();
 
   actions: Action[] = [
     { icon: 'payments', label: 'Withdraw', aria_label: 'Payments icon' },
@@ -25,4 +26,8 @@ export class BalanceCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  handleClick(action: string): void {
+    this.navigationEvent.emit(action);
+  }
 }

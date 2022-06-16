@@ -27,6 +27,7 @@
           fontSet="material-icons-outlined"
           [attr.aria-label]="action.aria_label"
           color="primary"
+          (click)="handleClick(action.label)"
           >{{ action.icon }}</mat-icon
         >
       </button>

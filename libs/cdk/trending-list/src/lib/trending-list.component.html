@@ -10,6 +10,6 @@
     <div class="uxg-subtitle-3" [ngClass]="{ positive: asset?.h > 0, negative: asset?.h < 0 }">
       {{ asset?.h }}%
     </div>
-    <mat-divider></mat-divider>
+    <mat-divider *ngIf="index + 1 < trending.length"></mat-divider>
   </mat-list-item>
 </mat-list>

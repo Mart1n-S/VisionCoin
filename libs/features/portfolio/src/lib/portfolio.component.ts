@@ -16,8 +16,6 @@ export class PortfolioComponent implements OnInit {
 
   watchlist?: Asset[];
 
-  // displayedColumns: string[] = ['hash', 'label', 'quantity', 'symbol'];
-
   constructor(private cryptoService: CryptoService) {}
 
   ngOnInit(): void {
@@ -38,7 +36,7 @@ export class PortfolioComponent implements OnInit {
     });
   }
 
-  handleClick(asset: Asset): void {
-    console.log(asset);
+  handleNavigation(event: string) {
+    console.log(event);
   }
 }
