@@ -188,12 +188,7 @@
             "aot": true,
             "assets": [
               "apps/client/src/favicon.ico",
-              "apps/client/src/assets",
-              {
-                "glob": "**/*",
-                "input": "./node_modules/cryptocurrency-icons/svg/color",
-                "output": "./assets/cryptocurrency-icons"
-              }
+              "apps/client/src/assets"
             ],
             "styles": ["apps/client/src/styles.scss"],
             "scripts": [],
