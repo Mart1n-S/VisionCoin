@@ -192,7 +192,7 @@
               {
                 "glob": "**/*",
                 "input": "./node_modules/cryptocurrency-icons/svg/color",
-                "output": "./assets/cryptocurrency-icons"
+                "output": "./cryptocurrency-icons"
               }
             ],
             "styles": ["apps/client/src/styles.scss"],
