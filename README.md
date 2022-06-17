@@ -16,13 +16,13 @@
 
 ## 📸 User Interface
 
-'''TODO 👉 insert some cool screenshot of your design'''
+![vue dashboard](./.github/assets/Dashboard.png)![vue dashboard 2](./.github/assets/Dashboard2.png)![vue sidenav](./.github/assets/Sidenav.png)
 
 <br>
 
 ## 🧪 Try me out
 
-'''TODO 👉 replace by the environment link when deployed'''
+> 👉 [VisionCoin](https://visioncoin-app.herokuapp.com/demo/portfolio)
 
 <br>
 
@@ -46,7 +46,7 @@ npm run start:server
 
 ## 🗺 Architectural Diagram
 
-'''TODO 👉 insert the diagram'''
+![vue architectural diagram](./.github/assets/Diagram.png)
 
 <br>
 
@@ -84,16 +84,10 @@ Server
 
 ## Environement variables
 
-| Variable         | Default value                                     |
-| :--------------- | :------------------------------------------------ |
-| `OIDC_CLIENT_ID` |                                                   |
-| `CLIENT_SECRET`  |                                                   |
-| `SESSION_SECRET` | Generated uiid                                    |
-| `FFDC`           | `https://api.fusionfabric.cloud`                  |
-| `PORT`           | `3000`                                            |
-| `OIDC_ISSUER`    | `https://api.fusionfabric.cloud/login/v1/sandbox` |
-| `OIDC_SCOPES`    | `openid profile`                                  |
-| `OIDC_ORIGIN`    | `http://localhost:3000`                           |
+| Variable       | Default value           |
+| :------------- | :---------------------- |
+| `PORT`         | `3000`                  |
+| `NODE_RED_URL` | `http://127.0.0.1:1880` |
 
 > Duplicate the `.env.template` and rename it to .env 👌🏼
 

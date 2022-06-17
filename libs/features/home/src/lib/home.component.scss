@@ -164,3 +164,59 @@
     }
   }
 }
+
+.title {
+  padding: var(--fds-spacing-3) var(--fds-spacing-2);
+
+  .uxg-h6 {
+    margin: var(--fds-spacing-0);
+  }
+}
+
+.sidenav-content {
+  padding: var(--fds-spacing-0) var(--fds-spacing-2);
+}
+
+.mat-drawer {
+  background-color: var(--fds-background);
+}
+
+.label {
+  margin-left: var(--fds-spacing-3);
+}
+
+.uxg-nav-list .mat-icon {
+  color: var(--fds-primary);
+}
+
+.uxg-nav-list a p {
+  margin: var(--fds-spacing-0) !important;
+}
+
+.uxg-nav .mat-drawer .uxg-nav-header {
+  margin-bottom: 0 !important;
+  height: fit-content !important;
+}
+
+.pattern {
+  padding: var(--fds-spacing-2) var(--fds-spacing-2) var(--fds-spacing-3) var(--fds-spacing-2);
+  width: 284px;
+  height: 130px;
+}
+
+.card-eye {
+  margin-left: 105px;
+  margin-top: -99px;
+  background: var(--fds-gradient);
+  height: 56px;
+  width: 80px;
+  position: absolute;
+  border-radius: var(--fds-spacing-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye {
+  color: var(--fds-on-dark);
+}
