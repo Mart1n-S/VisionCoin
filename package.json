@@ -11,6 +11,7 @@
     "start:server": "nx serve server --port 9229",
     "start": "node dist/apps/server/main.js",
     "build:dev": "ng build",
+    "build:prod": "npm run build",
     "build": "ng build client --prod && ng build server --prod",
     "test": "jest",
     "test:cov": "jest --ci --coverage",

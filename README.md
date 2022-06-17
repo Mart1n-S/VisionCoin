@@ -42,6 +42,14 @@ npm run dev
 npm run start:server
 ```
 
+Install Node-RED
+
+> 👉 [Node-RED](https://nodered.org/docs/getting-started/)
+
+Use - flow.json
+
+> 👉 [flow.json](./flows.json)
+
 <br>
 
 ## 🗺 Architectural Diagram
