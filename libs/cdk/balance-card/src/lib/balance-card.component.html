@@ -1,0 +1,37 @@
+<mat-card>
+  <mat-card-title class="uxg-h5">Your Current Balance</mat-card-title>
+  <mat-card-content>
+    <div class="content">
+      <div class="left-content" [ngClass]="{ positive: balance?.h > 0, negative: balance?.h < 0 }">
+        <mat-icon aria-hidden="false" aria-label="Trending icon" extra-large>{{
+          balance?.h > 0 ? 'trending_up' : 'trending_down'
+        }}</mat-icon>
+      </div>
+      <div class="right-content">
+        <div class="uxg-h4">${{ balance?.USDvalue.toFixed(2) }}</div>
+        <div
+          class="uxg-subtitle-1"
+          [ngClass]="{ positive: balance?.h > 0, negative: balance?.h < 0 }"
+        >
+          {{ balance?.h || 'Undefined' }}%
+          <span class="uxg-subtitle-2">| Last 30 days</span>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="action" *ngFor="let action of actions">
+      <button mat-icon-button color="primary">
+        <mat-icon
+          aria-hidden="false"
+          fontSet="material-icons-outlined"
+          [attr.aria-label]="action.aria_label"
+          color="primary"
+          (click)="handleClick(action.label)"
+          >{{ action.icon }}</mat-icon
+        >
+      </button>
+      <div class="label">{{ action.label }}</div>
+    </div>
+  </mat-card-actions>
+</mat-card>

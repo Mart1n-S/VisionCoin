@@ -2,7 +2,94 @@
   <i>Speaker</i>
   <b>Camera</b>
   <span></span>
-  <div class="content">
-    <router-outlet></router-outlet>
+  <div class="iphone-notch">
+    <div class="left-content">
+      <div>11:34</div>
+      <div class="right-content">
+        <mat-icon dense>signal_cellular_alt</mat-icon>
+        <mat-icon dense>wifi</mat-icon>
+        <mat-icon style="transform: rotate(90deg)" dense>battery_full</mat-icon>
+      </div>
+    </div>
   </div>
+  <mat-sidenav-container class="uxg-nav">
+    <mat-sidenav #sidenavdemo>
+      <div class="uxg-nav-header">
+        <img class="pattern" src="assets/Content.png" alt="image" />
+        <div class="card-eye">
+          <mat-icon class="eye material-icons-outlined" large>visibility</mat-icon>
+        </div>
+      </div>
+
+      <div class="sidenav-content">
+        <div class="title">
+          <div class="uxg-h6">VisionCoin</div>
+        </div>
+        <mat-nav-list class="uxg-nav-list">
+          <a
+            mat-list-item
+            [class.uxg-list-item-selected]="action.label === 'Home'"
+            *ngFor="let action of navigations"
+            (click)="handleClick(action.label)"
+          >
+            <mat-icon mat-list-icon [attr.aria-label]="action.aria_label">{{
+              action.icon
+            }}</mat-icon>
+            <p>{{ action.label }}</p>
+          </a>
+        </mat-nav-list>
+
+        <mat-divider></mat-divider>
+
+        <div class="title">
+          <div class="uxg-h6">Tools</div>
+        </div>
+        <mat-nav-list class="uxg-nav-list">
+          <a mat-list-item>
+            <mat-icon mat-list-icon aria-label="settings icon">settings</mat-icon>
+            <p>Settings</p>
+          </a>
+        </mat-nav-list>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <mat-toolbar class="app-bar uxg-toolbar">
+        <button
+          class="uxg-nav-header-button uxg-toolbar-menu"
+          mat-icon-button
+          color="primary"
+          (click)="sidenavdemo.toggle()"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+        <div class="uxg-logo" dense></div>
+        <div class="fill-remaining-space"></div>
+        <button mat-icon-button [matMenuTriggerFor]="menuHero" color="gradient">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+      </mat-toolbar>
+      <mat-menu #menuHero="matMenu" class="uxg-user-profile">
+        <div class="uxg-menu-header">
+          <div class="uxg-avatar-hero-block">
+            <div class="uxg-avatar" large>M</div>
+            <h6 class="uxg-h6">Martin</h6>
+            <span class="uxg-caption">Martin.account@gmail.com</span>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="uxg-menu-footer">
+          <button mat-flat-button color="primary" dense>
+            <mat-icon>exit_to_app</mat-icon>
+            Logout
+          </button>
+          <button mat-button color="primary" dense>View profile</button>
+        </div>
+      </mat-menu>
+
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

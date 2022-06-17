@@ -41,6 +41,58 @@
       },
       "tags": []
     },
+    "cdk-asset-list": {
+      "projectType": "library",
+      "root": "libs/cdk/asset-list",
+      "sourceRoot": "libs/cdk/asset-list/src",
+      "prefix": "finastra",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cdk/asset-list"],
+          "options": {
+            "jestConfig": "libs/cdk/asset-list/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/cdk/asset-list/src/**/*.ts",
+              "libs/cdk/asset-list/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "cdk-balance-card": {
+      "projectType": "library",
+      "root": "libs/cdk/balance-card",
+      "sourceRoot": "libs/cdk/balance-card/src",
+      "prefix": "finastra",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cdk/balance-card"],
+          "options": {
+            "jestConfig": "libs/cdk/balance-card/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/cdk/balance-card/src/**/*.ts",
+              "libs/cdk/balance-card/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "cdk-transactions-table": {
       "projectType": "library",
       "root": "libs/cdk/transactions-table",
@@ -67,6 +119,58 @@
       },
       "tags": []
     },
+    "cdk-trending-list": {
+      "projectType": "library",
+      "root": "libs/cdk/trending-list",
+      "sourceRoot": "libs/cdk/trending-list/src",
+      "prefix": "finastra",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cdk/trending-list"],
+          "options": {
+            "jestConfig": "libs/cdk/trending-list/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/cdk/trending-list/src/**/*.ts",
+              "libs/cdk/trending-list/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "cdk-watchlist": {
+      "projectType": "library",
+      "root": "libs/cdk/watchlist",
+      "sourceRoot": "libs/cdk/watchlist/src",
+      "prefix": "finastra",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cdk/watchlist"],
+          "options": {
+            "jestConfig": "libs/cdk/watchlist/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/cdk/watchlist/src/**/*.ts",
+              "libs/cdk/watchlist/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "client": {
       "projectType": "application",
       "root": "apps/client",
@@ -82,7 +186,10 @@
             "polyfills": "apps/client/src/polyfills.ts",
             "tsConfig": "apps/client/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/client/src/favicon.ico", "apps/client/src/assets"],
+            "assets": [
+              "apps/client/src/favicon.ico",
+              "apps/client/src/assets"
+            ],
             "styles": ["apps/client/src/styles.scss"],
             "scripts": [],
             "stylePreprocessorOptions": {
@@ -278,6 +385,29 @@
           }
         }
       }
+    },
+    "services": {
+      "projectType": "library",
+      "root": "libs/services",
+      "sourceRoot": "libs/services/src",
+      "prefix": "finastra",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/services"],
+          "options": {
+            "jestConfig": "libs/services/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/services/src/**/*.ts", "libs/services/src/**/*.html"]
+          }
+        }
+      },
+      "tags": []
     }
   }
 }

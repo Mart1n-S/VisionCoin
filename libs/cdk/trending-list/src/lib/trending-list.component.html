@@ -1,0 +1,22 @@
+<mat-list role="list">
+  <mat-list-item *ngFor="let asset of trending | slice: 0:3; let index = index">
+    <div class="ranking">{{ index + 1 }}</div>
+    <img
+      class="icon"
+      src="{{
+        'https://raw.githubusercontent.com/ErikThiart/cryptocurrency-icons/master/128/' +
+          asset?.name.toLowerCase().replace(' ', '-') +
+          '.png'
+      }}"
+    />
+    <div class="left-content">
+      <div class="uxg-subtitle-1">{{ asset?.name }}</div>
+      <div class="uxg-body-3">{{ asset?.code }}</div>
+    </div>
+    <div class="usd-value uxg-subtitle-1">$ {{ asset?.USDvalue }}</div>
+    <div class="uxg-subtitle-3" [ngClass]="{ positive: asset?.h > 0, negative: asset?.h < 0 }">
+      {{ asset?.h }}%
+    </div>
+    <mat-divider *ngIf="index + 1 < trending.length"></mat-divider>
+  </mat-list-item>
+</mat-list>

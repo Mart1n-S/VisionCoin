@@ -8,7 +8,7 @@ import { routes } from './constants';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  appName = 'Angular NestJS Starter';
+  appName = 'Vision Coin';
   navigationNodes = routes;
 
   constructor(private router: Router) {}

@@ -1,0 +1,47 @@
+@use '@finastra/fds-theme' as fds;
+
+.mat-list-base {
+  background: var(--fds-surface);
+  padding: var(--fds-spacing-0) !important;
+  @include fds.elevation(1);
+}
+
+.mat-list-base .mat-list-item {
+  height: fit-content !important;
+}
+
+.icon {
+  width: 38px;
+}
+
+.positive {
+  color: var(--fds-success);
+}
+.negative {
+  color: var(--fds-error);
+}
+
+.left-content {
+  margin-left: var(--fds-spacing-3);
+  flex: 1 1 0;
+}
+
+.right-content {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: var(--fds-spacing-0) var(--fds-spacing-3) var(--fds-spacing-0) var(--fds-spacing-0);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.bookmark {
+  padding: var(--fds-spacing-1);
+}
+
+.usd-value {
+  flex: 1 1 0;
+}
+
+:host ::ng-deep .mat-list-item-content {
+  padding: var(--fds-spacing-3) var(--fds-spacing-0) var(--fds-spacing-3) var(--fds-spacing-3) !important;
+}

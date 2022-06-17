@@ -1,105 +1,222 @@
-body {
-  background: #f4f6fc;
+@media screen and (max-width: 430px) {
+  .iphone-x {
+    i,
+    b,
+    s,
+    span {
+      display: none;
+    }
 
-  &:after {
-    content: 'Made with ❤️ by Adiel Hercules';
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    background-color: #3f436b;
-    color: #fff;
-    opacity: 0.6;
+    .iphone-notch {
+      display: none;
+    }
+
+    .content {
+      max-height: calc(100vh - 56px);
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
   }
 }
 
-.iphone-x {
-  position: relative;
-  margin: 40px auto;
-  width: 360px;
-  height: 780px;
-  overflow: hidden;
-  background-color: #191919;
-  border-radius: 40px;
-  box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919, 0px 0px 0px 20px #111;
-
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+@media screen and (min-width: 431px) {
+  :host {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  // home button indicator
-  &:after {
-    bottom: 7px;
-    width: 140px;
-    height: 4px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-  }
+  .iphone-x {
+    content: 'Made with ❤️ by Adiel Hercules';
+    position: relative;
+    width: 390px;
+    height: 844px;
+    overflow: hidden;
+    background-color: var(--fds-background);
+    border-radius: 40px;
+    box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919, 0px 0px 0px 20px #111;
 
-  // frontal camera/speaker frame
-  &:before {
-    top: 0px;
-    width: 56%;
-    height: 30px;
-    background-color: #1f1f1f;
-    border-radius: 0px 0px 40px 40px;
-  }
-
-  i,
-  b,
-  s,
-  span {
-    position: absolute;
-    display: block;
-    color: transparent;
-  }
-
-  // speaker
-  i {
-    top: 0px;
-    left: 50%;
-    transform: translate(-50%, 6px);
-    height: 8px;
-    width: 15%;
-    background-color: #101010;
-    border-radius: 8px;
-    box-shadow: inset 0px -3px 3px 0px rgba(256, 256, 256, 0.2);
-  }
-
-  // camera
-  b {
-    left: 10%;
-    top: 0px;
-    transform: translate(180px, 4px);
-    width: 12px;
-    height: 12px;
-    background-color: #101010;
-    border-radius: 12px;
-    box-shadow: inset 0px -3px 2px 0px rgba(256, 256, 256, 0.2);
-
+    &:before,
     &:after {
       content: '';
       position: absolute;
-      background-color: #2d4d76;
-      width: 6px;
-      height: 6px;
-      top: 2px;
-      left: 2px;
-      top: 3px;
-      left: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    // home button indicator
+    &:after {
+      bottom: 7px;
+      width: 140px;
+      height: 4px;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+    }
+
+    // frontal camera/speaker frame
+    &:before {
+      top: 0px;
+      width: 56%;
+      height: 30px;
+      background-color: #1f1f1f;
+      border-radius: 0px 0px 40px 40px;
+    }
+
+    i,
+    b,
+    s,
+    span {
+      position: absolute;
       display: block;
-      border-radius: 4px;
-      box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.5);
+      color: transparent;
+    }
+
+    // speaker
+    i {
+      top: 0px;
+      left: 50%;
+      transform: translate(-50%, 6px);
+      height: 8px;
+      width: 15%;
+      background-color: #101010;
+      border-radius: 8px;
+      box-shadow: inset 0px -3px 3px 0px rgba(256, 256, 256, 0.2);
+    }
+
+    // camera
+    b {
+      left: 15%;
+      top: 0px;
+      transform: translate(180px, 4px);
+      width: 12px;
+      height: 12px;
+      background-color: #101010;
+      border-radius: 12px;
+      box-shadow: inset 0px -3px 2px 0px rgba(256, 256, 256, 0.2);
+
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: #2d4d76;
+        width: 6px;
+        height: 6px;
+        top: 2px;
+        left: 2px;
+        top: 3px;
+        left: 3px;
+        display: block;
+        border-radius: 4px;
+        box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .iphone-notch {
+      width: 100%;
+      height: 30px;
+      background: var(--fds-surface);
+      .left-content {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--fds-spacing-2) var(--fds-spacing-3) var(--fds-spacing-0) var(--fds-spacing-4);
+        margin-left: var(--fds-spacing-2);
+      }
+      .right-content {
+        display: flex;
+        flex-direction: row;
+        gap: var(--fds-spacing-2);
+      }
+    }
+
+    .fill-remaining-space {
+      flex: 1 1 auto;
+    }
+
+    .content {
+      padding: var(--fds-spacing-3);
+      height: 100%;
+      max-height: 714px;
+      overflow-y: auto;
+    }
+
+    .content::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .content::-webkit-scrollbar-track:hover {
+      border: 4px solid rgba(var(--fds-on-background), 0.2);
+    }
+
+    /* scrollbar itself */
+    .content::-webkit-scrollbar-thumb {
+      background-color: var(--fds-outline);
+      border-radius: 16px;
+    }
+    .content::-webkit-scrollbar-thumb:hover {
+      background-color: #a0a0a5;
+
+      border: 4px solid rgba(var(--fds-on-background), 0.3);
+    }
+
+    /* set button(top and bottom of the scrollbar) */
+    .content::-webkit-scrollbar-button {
+      display: none;
     }
   }
+}
 
-  .content {
-    padding: 34px 12px 12px 12px;
-    height: 100%;
-    max-height: 735px;
+.title {
+  padding: var(--fds-spacing-3) var(--fds-spacing-2);
+
+  .uxg-h6 {
+    margin: var(--fds-spacing-0);
   }
+}
+
+.sidenav-content {
+  padding: var(--fds-spacing-0) var(--fds-spacing-2);
+}
+
+.mat-drawer {
+  background-color: var(--fds-background);
+}
+
+.label {
+  margin-left: var(--fds-spacing-3);
+}
+
+.uxg-nav-list .mat-icon {
+  color: var(--fds-primary);
+}
+
+.uxg-nav-list a p {
+  margin: var(--fds-spacing-0) !important;
+}
+
+.uxg-nav .mat-drawer .uxg-nav-header {
+  margin-bottom: 0 !important;
+  height: fit-content !important;
+}
+
+.pattern {
+  padding: var(--fds-spacing-2) var(--fds-spacing-2) var(--fds-spacing-3) var(--fds-spacing-2);
+  width: 284px;
+  height: 130px;
+}
+
+.card-eye {
+  margin-left: 105px;
+  margin-top: -99px;
+  background: var(--fds-gradient);
+  height: 56px;
+  width: 80px;
+  position: absolute;
+  border-radius: var(--fds-spacing-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye {
+  color: var(--fds-on-dark);
 }

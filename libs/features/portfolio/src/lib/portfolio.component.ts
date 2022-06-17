@@ -1,7 +1,6 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, Inject, OnInit } from '@angular/core';
-import { Asset, Transaction } from '@finastra/api-interfaces';
-import { NODE_RED_URL, PROXY_URL } from '@finastra/core';
+import { Component, OnInit } from '@angular/core';
+import { Asset, Balance } from '@finastra/api-interfaces';
+import { CryptoService } from '@finastra/services';
 
 @Component({
   selector: 'finastra-portfolio',
@@ -9,68 +8,35 @@ import { NODE_RED_URL, PROXY_URL } from '@finastra/core';
   styleUrls: ['./portfolio.component.scss'],
 })
 export class PortfolioComponent implements OnInit {
-  assets: Asset[] = [
-    {
-      addresse: '0x986368273648623',
-      name: 'Bitcoin',
-      code: 'BTC',
-      icon: '',
-      quantity: 1.78,
-      USDvalue: 12030.33,
-      h: 0.02,
-    },
-    {
-      addresse: '0x986368266486224',
-      name: 'Etherum',
-      code: 'ETH',
-      icon: '',
-      quantity: 0.998,
-      USDvalue: 2030.33,
-      h: 0.82,
-    },
-    {
-      addresse: '0x986368273648678',
-      name: 'BNB',
-      code: 'bnb',
-      icon: '',
-      quantity: 10.28,
-      USDvalue: 30.33,
-      h: 3.2,
-    },
-  ];
+  balance?: Balance;
 
-  displayedColumns: string[] = ['hash', 'label', 'quantity', 'symbol'];
+  assets?: Asset[];
 
-  transactions: Transaction[] = [
-    { hash: '0x43JIHIEJANF13', label: 'Bitcoin', quantity: 1.5, symbol: 'BTC' },
-    { hash: '0x2456TYHF7IYT5', label: 'Etherum', quantity: 2.5, symbol: 'ETH' },
-    { hash: '0x78RE4TVSRE34R', label: 'BNB', quantity: 0.5, symbol: 'bnb' },
-  ];
+  trending?: Asset[];
 
-  constructor(
-    private http: HttpClient,
-    @Inject(PROXY_URL) protected proxyUrl: string,
-    @Inject(NODE_RED_URL) protected nodeRedUrl: string
-  ) {}
+  watchlist?: Asset[];
 
-  getData() {
-    return this.get<any>(`/addresses`);
-  }
+  constructor(private cryptoService: CryptoService) {}
 
   ngOnInit(): void {
-    this.getData().subscribe((res) => console.log(res));
-  }
+    this.cryptoService.getBalance().subscribe((res: Balance) => {
+      this.balance = res;
+    });
 
-  private get<T>(target: string) {
-    return this.http.get<T>(this.proxyUrl, {
-      params: {
-        serviceId: this.nodeRedUrl,
-        target,
-      },
+    this.cryptoService.getAssets().subscribe((res: Asset[]) => {
+      this.assets = res;
+    });
+
+    this.cryptoService.getTrendings().subscribe((res: Asset[]) => {
+      this.trending = res;
+    });
+
+    this.cryptoService.getWatchlist().subscribe((res: Asset[]) => {
+      this.watchlist = res;
     });
   }
 
-  handleClick(asset: Asset): void {
-    console.log(asset);
+  handleNavigation(event: string) {
+    console.log(event);
   }
 }

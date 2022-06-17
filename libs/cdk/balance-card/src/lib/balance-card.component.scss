@@ -1,0 +1,44 @@
+@use '@finastra/fds-theme' as fds;
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--fds-spacing-3);
+  padding: var(--fds-spacing-4);
+}
+
+.positive {
+  color: var(--fds-success);
+}
+.negative {
+  color: var(--fds-error);
+}
+
+.uxg-h4 {
+  margin: var(--fds-spacing-0);
+}
+
+.uxg-subtitle-2 {
+  color: var(--fds-on-surface-medium);
+}
+
+.mat-card-content {
+  margin: var(--fds-spacing-0);
+}
+
+.mat-card > .mat-card-actions:last-child {
+  margin-bottom: unset !important;
+  padding-bottom: unset !important;
+}
+
+.mat-card-actions {
+  justify-content: space-around;
+  padding: var(--fds-spacing-0) var(--fds-spacing-0) var(--fds-spacing-2) var(--fds-spacing-0);
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
