@@ -14,9 +14,16 @@
     </div>
     <div class="right-content">
       <div class="usd-value uxg-subtitle-1">$ {{ asset?.USDvalue }}</div>
-      <div class="uxg-subtitle-3" [ngClass]="{ positive: asset?.h > 0, negative: asset?.h < 0 }">
-        {{ asset?.h }}%
+      <div *ngIf="asset?.h > 0; else negatif">
+        <div class="uxg-subtitle-3" [ngClass]="{ positive: asset?.h > 0, negative: asset?.h < 0 }">
+          +{{ asset?.h }}%
+        </div>
       </div>
+      <ng-template #negatif>
+        <div class="uxg-subtitle-3" [ngClass]="{ positive: asset?.h > 0, negative: asset?.h < 0 }">
+          {{ asset?.h }}%
+        </div>
+      </ng-template>
     </div>
     <div class="bookmark">
       <button
