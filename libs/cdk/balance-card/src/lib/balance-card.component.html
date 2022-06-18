@@ -9,13 +9,24 @@
       </div>
       <div class="right-content">
         <div class="uxg-h4">${{ balance?.USDvalue.toFixed(2) }}</div>
-        <div
-          class="uxg-subtitle-1"
-          [ngClass]="{ positive: balance?.h > 0, negative: balance?.h < 0 }"
-        >
-          {{ balance?.h || 'Undefined' }}%
-          <span class="uxg-subtitle-2">| Last 30 days</span>
+        <div *ngIf="balance?.h > 0; else negatif">
+          <div
+            class="uxg-subtitle-1"
+            [ngClass]="{ positive: balance?.h > 0, negative: balance?.h < 0 }"
+          >
+            +{{ balance?.h || 'Undefined' }}%
+            <span class="uxg-subtitle-2">| Last 30 days</span>
+          </div>
         </div>
+        <ng-template #negatif>
+          <div
+            class="uxg-subtitle-1"
+            [ngClass]="{ positive: balance?.h > 0, negative: balance?.h < 0 }"
+          >
+            {{ balance?.h || 'Undefined' }}%
+            <span class="uxg-subtitle-2">| Last 30 days</span>
+          </div>
+        </ng-template>
       </div>
     </div>
   </mat-card-content>
