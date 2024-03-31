@@ -20,11 +20,6 @@
 
 <br>
 
-## 🧪 Try me out
-
-> 👉 [VisionCoin](https://visioncoin-app.herokuapp.com/demo/portfolio)
-
-<br>
 
 ## 🚀 Quick Start
 
